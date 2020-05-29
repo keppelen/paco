@@ -4,11 +4,15 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { themeStorageKey } from '@lib/theme'
 const bgVariableName = '--bg'
 
+import { flush } from '@lib/css'
+
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <style id="__css__">{flush()}</style>
+        </Head>
         <body>
           <script
             dangerouslySetInnerHTML={{

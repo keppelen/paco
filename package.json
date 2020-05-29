@@ -15,6 +15,7 @@
     "@reach/portal": "^0.8.5",
     "body-scroll-lock": "^2.6.4",
     "classnames": "^2.2.6",
+    "fnv1a": "^1.0.1",
     "gray-matter": "^4.0.2",
     "intersection-observer": "^0.7.0",
     "lodash.debounce": "^4.0.8",

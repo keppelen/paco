@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import Page from '@components/page'
 import css from '@lib/css'
 import Button from '@components/button'
@@ -11,8 +12,8 @@ const Test = () => {
       <div
         className={css(`
           font-size: ${count + 'px'};
-          background: blue;
           appearance: none;
+          background: blue
         `)}
       >
         hihihi

@@ -4,14 +4,21 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { themeStorageKey } from '@lib/theme'
 const bgVariableName = '--bg'
 
-import { flush } from '@lib/css'
+import { flush, cache } from '@lib/css'
 
 class MyDocument extends Document {
   render() {
+    const x = flush()
+    console.log('server-side computed rules', x)
     return (
       <Html lang="en">
         <Head>
-          <style id="__css__">{flush()}</style>
+          <style id="__css__">{x}</style>
+          {/* <script
+            dangerouslySetInnerHTML={{
+              __html: `(() => window.__cssCache__ = ${JSON.stringify(cache)})()`
+            }}
+          /> */}
         </Head>
         <body>
           <script

@@ -28,6 +28,7 @@
     "react-dom": "^16.13.1",
     "react-intersection-observer": "^8.24.2",
     "react-transition-group": "^4.3.0",
+    "style-sheet": "^4.0.4",
     "swr": "^0.2.0"
   },
   "devDependencies": {

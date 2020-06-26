@@ -2,7 +2,7 @@
 title: SVG Caching with use
 description: Smaller DOM size by reusing existing SVG icons
 slug: svg-caching-with-use
-date: June 20, 2020
+date: June 25, 2020
 og: https://i.microlink.io/https%3A%2F%2Fcards.microlink.io%2F%3Fpreset%3Dpaco%26title%3DSVG%2520Caching%2520with%2520%253Cuse%253E%23
 ---
 

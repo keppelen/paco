@@ -4,6 +4,15 @@ import Navigation from './navigation'
 import Page from '@components/page'
 import styles from './post.module.css'
 
+function escapeHtml(unsafe) {
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+}
+
 const Post = ({
   title,
   slug,
@@ -35,7 +44,9 @@ const Post = ({
 
       <article
         dangerouslySetInnerHTML={{
-          __html: `<span class="${styles.date}">${date}</span><h1 class="${styles.title}">${title}</h1>${html}`
+          __html: `<span class="${styles.date}">${date}</span><h1 class="${
+            styles.title
+          }">${escapeHtml(title)}</h1>${html}`
         }}
       />
 

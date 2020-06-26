@@ -1,5 +1,5 @@
 ---
-title: SVG Caching with use
+title: SVG Caching with <use>
 description: Smaller DOM size by reusing existing SVG icons
 slug: svg-caching-with-use
 date: June 25, 2020
@@ -122,7 +122,7 @@ return (
 
 ## Conclusion
 
-Here's how our new `withIcon` HOC looks with caching:
+Here's our new `withIcon` HOC with caching:
 
 ```jsx highlight=2,4-5,10,12,13,15-18,30-32
 import { memo } from 'react'

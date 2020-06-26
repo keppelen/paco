@@ -15,6 +15,7 @@ const Post = ({
   previous,
   next
 }) => {
+  console.log(og)
   return (
     <Page
       slug={slug}
@@ -22,7 +23,9 @@ const Post = ({
       description={description}
       showHeaderTitle={false}
       image={
-        og && `https://res.cloudinary.com/dsdlhtnpw/image/upload/${slug}.png`
+        og && og === true
+          ? `https://res.cloudinary.com/dsdlhtnpw/image/upload/${slug}.png`
+          : og
       }
     >
       <Head>
